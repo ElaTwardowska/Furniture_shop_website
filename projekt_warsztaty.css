@@ -1,7 +1,7 @@
 body {
     font-family: Raleway, Verdana, Segoe, sans-serif;
     width: 100%;
-    background: #d8d8d8;
+    background: #f0f0f0;
 }
 #main_container {
     width: 1100px;
@@ -33,7 +33,7 @@ body {
     text-transform: uppercase;
 }
 span.fav {
-    color: #1fb282;
+    color: #26c7a9;
 }
 #slider {
     background: linear-gradient(to bottom, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 0%, rgba(209,209,209,1) 100%);;
@@ -58,7 +58,7 @@ span.fav {
 }
 #slider #slider_content a {
     text-align:center;
-    background-color: #1fb282;;
+    background-color: #26c7a9;;
     border-radius:10%;
     text-decoration:none;
     padding: 10px 20px;
@@ -72,9 +72,13 @@ span.fav {
     height: 300px;
     overflow:hidden;
 }
+#prod_container {
+    width:1000px;
+    margin:0 auto;
+}
 #product_list ul li {
     display: inline-block;
-    width: 30%;
+    width: 29%;
     padding:15px 15px;
 }
 #product_list ul li h1{
@@ -90,7 +94,7 @@ span.fav {
     display: block;
     bottom: 75px;
     height: 60px;
-    width: 329px;
+    width: 290px;
     background-color: #eaeaea;
     opacity: 0.8;
 }
@@ -101,18 +105,19 @@ span.fav {
     left:10px;
     width:170px;
     height:7px;
-    background-color: #1fb282;
+    background-color: #26c7a9;
 }
 #product_list ul li .ramka {
     overflow: hidden;
 }
 #product_list ul li p {
     position:absolute;
-    width:27%;
+    width:25%;
     text-align:justify;
     top:300px;
     padding:10px;
     font-size:15px;
+    color: #4a4a4a;
 }
 #product_list .ramka:hover p {
     top:90px;
@@ -121,70 +126,132 @@ span.fav {
     top: 50px;
 }
 #product_list .ramka:hover .szara_belka {
-    top: 30px;
-    height: 200px;
+    top: 14px;
+    height: 226px;
+    border: 2px solid #d9d9d9;
+    opacity:1;
+    background-color:white;
 }
 
 #cennik {
     position: relative;
-    background-color: #d8d8d8;
+    background-color: #f0f0f0;
     height: 600px;
     width:1100px;
 }
-#cennik h1{
+#cennik_container {
+    width:1021px;
+    margin:0 auto;
+}
+#cennik >  h1{
     font-size:20px;
     display: block;
-    padding: 25px;
+    padding: 25px 25px 25px 70px;
     text-transform:uppercase;
 }
 #cennik > h1::after {
     content: "";
     position: absolute;
-    top: 55px;
-    left: 15px;
-    width: 330px;
+    top: 60px;
+    left: 70px;
+    width: 287px;
     height: 7px;
-    background-color: #1fb282;
+    background-color: #26c7a9;
 }
 #cennik ul li .box {
     float:left;
     list-style:none;
-    margin:50px 0 50px 70px;
+    margin:50px 0 50px 30px;
 }
 #cennik .box{
-    /*position:relative;*/
-    width:250px;
-    height:350px;
-    border:1px solid #818181;
+    position:relative;
+    width:28%;
+    height:400px;
+    border:2px solid #d4d4d4;
     text-align: justify;
-    padding: 10px;
-    background-color: #e5e5e5;
+}
+#cennik ul > :nth-child(2n) .box{
+    background-color:#26c7a9;
+    border:2px solid #26c7a9;
+}
+#cennik ul > :nth-child(2n) .box ul li:nth-child(2n+1){
+    background-color: white;
+}
+#cennik ul > :nth-child(2n+1) .box {
+    background-color:#f7f7f7;
 }
 #cennik .box h1 {
     text-align:center;
+    display:box;
+    font-size:20px;
+    text-transform:uppercase;
+    padding:25px;
+    color: #24d1a9;
+}
+#cennik ul > :nth-child(2n) .box h1 {
+    color: white;
 }
 #cennik .box .cena {
+    box-sizing: border-box;
+    padding-top:17px;
     text-align:center;
-    vertical-align:middle;
     line-height:20px;
     margin:0 auto;
     background-color:white;
     width: 100px;
     height: 100px;
     border-radius:50%;
-    font-size:13px;
-    border: solid 1px darkslategray;
+    font-size:12px;
+    border: 2px solid #c6c6c6;
+    color: #c4c4c4;
 }
 #cennik .box .cena span {
     font-size:30px;
-    line-height:30px;
-    padding:5px;
+    line-height:20px;
+}
+#cennik ul > :nth-child(2n) .box .cena {
+    color: #26c7a9;
+    border:none;
 }
 #cennik .box .cena sup {
     font-size:12px;
 }
-#cennik .box ul  {
+#cennik .box ul {
+    padding-top:30px;
+}
+#cennik .box ul li {
     list-style:none;
     display:block;
+    background-color: #d8d8d8;
+    height:35px;
+    line-height:35px;
     text-align:center;
+    color: #ababab;
+}
+#cennik .box ul li:nth-child(2n+1) {
+    background-color: #e3e3e3
+}
+#cennik .box ul li:nth-child(2n) {
+    background-color: #f0f0f0;
+}
+#cennik .box .button {
+    position:absolute;
+    bottom:15px;
+    left:33%;
+    text-decoration:none;
+    width:35%;
+    height: 30px;
+    border-radius:10%;
+    text-align:center;
+    line-height: 30px;
+    text-transform:uppercase;
+    font-size:15px;
+}
+#cennik ul > :nth-child(2n+1) .button{
+    background-color:#26c7a9;
+    color:white;
+}
+#cennik ul > :nth-child(2n) .button{
+    background-color:white;
+    color:#26c7a9;
 }
