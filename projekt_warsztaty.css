@@ -166,7 +166,7 @@ span.fav {
 #cennik .box{
     position:relative;
     width:28%;
-    height:400px;
+    height:420px;
     border:2px solid #d4d4d4;
     text-align: justify;
 }
@@ -180,12 +180,42 @@ span.fav {
 #cennik ul > :nth-child(2n+1) .box {
     background-color:#f7f7f7;
 }
+#cennik ul li .box::after {
+    content:"";
+    position:absolute;
+    top:-14px;
+    left:47%;
+    background-color:#bfbfbf;
+    border-radius:50%;
+    width:21px;
+    height:21px;
+    z-index:2;
+}
+#cennik ul > :nth-child(2n) .box::after {
+    background-color:white;
+}
+#cennik ul li .box::before {
+    content:"";
+    position:absolute;
+    top: -30px;
+    left:42%;
+    background-color:white;
+    border: 1px solid #d9d9d9;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    z-index:1;
+}
+#cennik ul > :nth-child(2n) .box::before {
+    background-color: #26c7a9;
+    border:1px solid #26c7a9;
+}
 #cennik .box h1 {
     text-align:center;
     display:box;
     font-size:20px;
     text-transform:uppercase;
-    padding:25px;
+    padding:35px 25px 25px 25px;
     color: #24d1a9;
 }
 #cennik ul > :nth-child(2n) .box h1 {
@@ -254,4 +284,35 @@ span.fav {
 #cennik ul > :nth-child(2n) .button{
     background-color:white;
     color:#26c7a9;
+}
+#kontakt {
+    width:1100px;
+    height:400px;
+    background-color:white;
+    position:relative;
+}
+#kontakt h1{
+    font-size:20px;
+    display: block;
+    padding: 25px 25px 25px 70px;
+    text-transform:uppercase;
+}
+#kontakt h1::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    width: 287px;
+    height: 7px;
+    background-color: #26c7a9;
+    z-index:2;
+}
+#kontakt #formularz #aside{
+    position:absolute;
+}
+#kontakt #formularz {
+    width: 400px;
+    display:block;
+    background-color:red;
+
 }
