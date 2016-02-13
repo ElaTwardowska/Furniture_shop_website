@@ -1,19 +1,23 @@
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url("./font/raleway-regular-webfont.eot");
+    src: url("./font/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./font/raleway-regular-webfont.woff2") format("woff2"), url("./font/raleway-regular-webfont.woff") format("woff"), url("./font/raleway-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: Raleway, Verdana, Segoe, sans-serif;
-    width: 100%;
-    background: #f0f0f0;
-}
-#main_container {
-    width: 1100px;
-    margin:0 auto;
-}
+     font-family: ralewayregular,sans-serif ;
+     width: 1100px;
+     margin:0 auto;
+ }
 #main_header {
     background-color:black;
 }
 #main_header h1 {
     float: left;
     color: white;
-    line-height: 40px;
+    line-height: 30px;
     padding: 10px 40px;
     text-transform: uppercase;
 }
@@ -28,9 +32,37 @@ body {
     color:white;
     text-align: right;
     text-decoration: none;
-    line-height: 40px;
+    line-height: 30px;
     padding: 10px 30px;
     text-transform: uppercase;
+    font-size:15px;
+}
+#main_header .menu ul .sub-menu {
+    position: absolute;
+    top:65px;
+    width: 140px;
+    background-color: black;
+    text-align: left;
+    font-size: 14px;
+    display: none;
+}
+#main_header .menu ul .sub-menu a {
+    text-transform: capitalize;
+    line-height:20px;
+}
+#main_header .menu ul .sub-menu-arrow {
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color:black;
+    transform: rotate(45deg);
+    right:594px;
+    top:55px;
+    display:none;
+}
+#main_header .menu ul li:hover .sub-menu,
+#main_header .menu ul li:hover .sub-menu-arrow{
+    display: block;
 }
 span.fav {
     color: #26c7a9;
@@ -43,20 +75,20 @@ span.fav {
     float:left;
     padding-top:3%;
 }
-#slider #slider_content {
+#slider #slider_content_1 {
     clear:right;
     padding:8% 20%;
     text-align:center;
 }
-#slider #slider_content h1 {
+#slider #slider_content_1 h1 {
     font-size:30px;
     text-transform:uppercase;
 }
-#slider #slider_content p {
-    padding: 25px 10px;
+#slider #slider_content_1 p {
+    padding: 30px 10px;
     font-size:15px;
 }
-#slider #slider_content a {
+#slider #slider_content_1 a {
     text-align:center;
     background-color: #26c7a9;;
     border-radius:10%;
@@ -65,7 +97,32 @@ span.fav {
     color:white;
     text-transform:uppercase;
 }
-
+#slider #slider_content_1::after {
+    content:"";
+    position:absolute;
+    background-color: none;
+    border-right:4px solid #26c7a9;
+    border-top:4px solid #26c7a9;
+    width: 30px;
+    height:30px;
+    z-index:3;
+    top:217px;
+    right:375px;
+    transform: rotate(45deg);
+}
+#slider #slider_content_1 p::before {
+    content: "";
+    position: absolute;
+    background-color: none;
+    border-left: 4px solid #26c7a9;
+    border-bottom: 4px solid #26c7a9;
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+    top: 217px;
+    left: 360px;
+    transform: rotate(45deg);
+}
 #product_list {
     position: relative;
     background-color:white;
@@ -83,7 +140,7 @@ span.fav {
 }
 #product_list ul li h1{
     position: absolute;
-    bottom: 35%;
+    bottom: 107px;
     text-indent: 20px;
     font-size:15px;
     font-weight:bold;
@@ -107,8 +164,9 @@ span.fav {
     height:7px;
     background-color: #26c7a9;
 }
-#product_list ul li .ramka {
-    overflow: hidden;
+#product_list ul li img {
+    width: 290px;
+    height:228px;
 }
 #product_list ul li p {
     position:absolute;
@@ -119,13 +177,13 @@ span.fav {
     font-size:15px;
     color: #4a4a4a;
 }
-#product_list .ramka:hover p {
+#product_list ul li:hover p {
     top:90px;
 }
-#product_list .ramka:hover h1 {
+#product_list ul li:hover h1 {
     top: 50px;
 }
-#product_list .ramka:hover .szara_belka {
+#product_list ul li:hover .szara_belka {
     top: 14px;
     height: 226px;
     border: 2px solid #d9d9d9;
@@ -133,23 +191,23 @@ span.fav {
     background-color:white;
 }
 
-#cennik {
+#pricelist {
     position: relative;
     background-color: #f0f0f0;
     height: 600px;
     width:1100px;
 }
-#cennik_container {
+#pricelist_container {
     width:1021px;
     margin:0 auto;
 }
-#cennik >  h1{
+#pricelist >  h1{
     font-size:20px;
     display: block;
     padding: 25px 25px 25px 70px;
     text-transform:uppercase;
 }
-#cennik > h1::after {
+#pricelist > h1::after {
     content: "";
     position: absolute;
     top: 60px;
@@ -158,29 +216,29 @@ span.fav {
     height: 7px;
     background-color: #26c7a9;
 }
-#cennik ul li .box {
+#pricelist ul li .box {
     float:left;
     list-style:none;
     margin:50px 0 50px 30px;
 }
-#cennik .box{
+#pricelist .box{
     position:relative;
     width:28%;
     height:420px;
     border:2px solid #d4d4d4;
     text-align: justify;
 }
-#cennik ul > :nth-child(2n) .box{
+#pricelist ul > :nth-child(2n) .box{
     background-color:#26c7a9;
     border:2px solid #26c7a9;
 }
-#cennik ul > :nth-child(2n) .box ul li:nth-child(2n+1){
+#pricelist ul > :nth-child(2n) .box ul li:nth-child(2n+1){
     background-color: white;
 }
-#cennik ul > :nth-child(2n+1) .box {
+#pricelist ul > :nth-child(2n+1) .box {
     background-color:#f7f7f7;
 }
-#cennik ul li .box::after {
+#pricelist ul li .box::after {
     content:"";
     position:absolute;
     top:-14px;
@@ -191,10 +249,10 @@ span.fav {
     height:21px;
     z-index:2;
 }
-#cennik ul > :nth-child(2n) .box::after {
+#pricelist ul > :nth-child(2n) .box::after {
     background-color:white;
 }
-#cennik ul li .box::before {
+#pricelist ul li .box::before {
     content:"";
     position:absolute;
     top: -30px;
@@ -206,11 +264,11 @@ span.fav {
     height:50px;
     z-index:1;
 }
-#cennik ul > :nth-child(2n) .box::before {
+#pricelist ul > :nth-child(2n) .box::before {
     background-color: #26c7a9;
     border:1px solid #26c7a9;
 }
-#cennik .box h1 {
+#pricelist .box h1 {
     text-align:center;
     display:box;
     font-size:20px;
@@ -218,10 +276,10 @@ span.fav {
     padding:35px 25px 25px 25px;
     color: #24d1a9;
 }
-#cennik ul > :nth-child(2n) .box h1 {
+#pricelist ul > :nth-child(2n) .box h1 {
     color: white;
 }
-#cennik .box .cena {
+#pricelist .box .cena {
     box-sizing: border-box;
     padding-top:17px;
     text-align:center;
@@ -232,24 +290,25 @@ span.fav {
     height: 100px;
     border-radius:50%;
     font-size:12px;
+    font-weight:bold;
     border: 2px solid #c6c6c6;
     color: #c4c4c4;
 }
-#cennik .box .cena span {
+#pricelist .box .cena span {
     font-size:30px;
     line-height:20px;
 }
-#cennik ul > :nth-child(2n) .box .cena {
+#pricelist ul > :nth-child(2n) .box .cena {
     color: #26c7a9;
     border:none;
 }
-#cennik .box .cena sup {
+#pricelist .box .cena sup {
     font-size:12px;
 }
-#cennik .box ul {
+#pricelist .box ul {
     padding-top:30px;
 }
-#cennik .box ul li {
+#pricelist .box ul li {
     list-style:none;
     display:block;
     background-color: #d8d8d8;
@@ -258,13 +317,13 @@ span.fav {
     text-align:center;
     color: #ababab;
 }
-#cennik .box ul li:nth-child(2n+1) {
+#pricelist .box ul li:nth-child(2n+1) {
     background-color: #e3e3e3
 }
-#cennik .box ul li:nth-child(2n) {
+#pricelist .box ul li:nth-child(2n) {
     background-color: #f0f0f0;
 }
-#cennik .box .button {
+#pricelist .box .button {
     position:absolute;
     bottom:15px;
     left:33%;
@@ -277,11 +336,11 @@ span.fav {
     text-transform:uppercase;
     font-size:15px;
 }
-#cennik ul > :nth-child(2n+1) .button{
+#pricelist ul > :nth-child(2n+1) .button{
     background-color:#26c7a9;
     color:white;
 }
-#cennik ul > :nth-child(2n) .button{
+#pricelist ul > :nth-child(2n) .button{
     background-color:white;
     color:#26c7a9;
 }
@@ -307,12 +366,103 @@ span.fav {
     background-color: #26c7a9;
     z-index:2;
 }
-#kontakt #formularz #aside{
+#kontakt #form #aside{
     position:absolute;
+    display:inline-block;
+    width: 500px;
 }
-#kontakt #formularz {
-    width: 400px;
-    display:block;
-    background-color:red;
+#kontakt #form {
+    width: 1100px;
+    height: 300px;
+    display: inline-block;
+    background-color: white;
+}
+input#name, #email, #message {
+    margin:35px 0 0 60px;
+    width:600px;
+    line-height: 35px;
+    padding:5px 0 0 25px;
+    font-size:25px;
+    color: #e6e6e6;
+    border:1px solid #a6e3d1;
+}
+button#sendBtn {
+    float:right;
+    margin: -75px 115px 50px 0;
+    border: none;
+    width: 250px;
+    height: 70px;
+    background-color:#23ba9c;
+    border-radius:7%;
+    color:white;
+    font-size:25px;
+    text-transform:uppercase;
+}
+#kontakt div.contact-right{
+    width: 277px;
+    position: absolute;
+    top: 70px;
+    right: 80px;
+}
+#kontakt div.contact-right img {
+    width:175px;
+    padding-left: 25px;
+}
+div.contact-right .checkbox input {
+    display: block;
+    opacity: 0;
+    height: 50px;
+    position: absolute;
+    width: 48px;
+    cursor: pointer;
+}
+div.contact-right .checkbox label {
+    display: block;
+    padding-left: 35px;
+    position: relative;
+    font-size: 15px;
+    color: #cecece;
+    line-height: 120%;
+    padding-top: 7px;
+    cursor: pointer;
+}
+.checkbox label::before, .checkbox label::after {
+    border: 1px solid #27c7ab;
+    content: "";
+    display: block;
+    left: -5px;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+    top: 7px;
+}
+.checkbox label::after {
+    background: url("images/form_ok.jpg") no-repeat center;
+    border: 0;
+    display: none;
+}
+.checkbox input:checked + label::after {
+    display: block;
+}
+footer {
+    height: 150px;
+}
 
+footer > p , #social_media {
+    display:inline-block;
+    padding-left:20px;
+    text-transform:uppercase;
+    font-size:13px;
+}
+footer #copy  {
+    padding-left: 60px;
+    color: #949494;
+    font-size:15px;
+    text-transform:none;
+}
+footer #social_media {
+    padding: 0 0 0 325px;
+}
+footer p span {
+    font-weight:bold;
 }

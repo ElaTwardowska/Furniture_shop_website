@@ -15,15 +15,16 @@
       <h1 class="title">Sit <span class="fav">on</span> chair</h1>
       <nav class="menu">
              <ul>
-                <li>
-                    <a href="">O firmie</a>
+                <li><a href="">O firmie</a>
+                    <div class="sub-menu-arrow"> </div>
+                    <ul class="sub-menu">
+                        <li><a href="#">Aktualności</a></li>
+                        <li><a href="#">Nasz team</a></li>
+                        <li><a href="#">Historia</a></li>
+                    </ul>
                 </li>
-                <li>
-                     <a href="">Galeria</a>
-                </li>
-                <li>
-                    <a href="">Kontakt</a>
-                </li>
+                <li> <a href="">Galeria</a></li>
+                <li> <a href="">Kontakt</a></li>
              </ul>
       </nav>
     </header>
@@ -33,12 +34,11 @@
              <ul>
                 <li>
                      <img src="images/black_chair.png">
-                     <div id="slider_content">
+                     <div id="slider_content_1">
                          <h1>Sit <span class="fav">on</span> our <span class="fav">chair<span></span></h1>
                          <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
                          <a href="">Zobacz więcej</a>
                      </div>
-
                  </li>
              </ul>
          </section>
@@ -47,37 +47,30 @@
              <div id="prod_container">
              <ul>
                  <li>
-                    <div class="ramka">
                         <img src="images/box1_img.jpg"/>
                         <h1>Chair CLAIR</h1>
                         <div class="szara_belka"></div>
                         <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książk</p>
-                    </div>
-
                 </li>
                 <li>
-                    <div class="ramka">
                         <img src="images/box2_img.jpg"/>
                         <h1>Chair MARGARITA</h1>
                         <div class="szara_belka"></div>
                         <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książk</p>
-                    </div>
                 </li>
                 <li>
-                    <div class="ramka">
                          <img src="images/box2_img.jpg"/>
                          <h1>Chair ??</h1>
                          <div class="szara_belka"></div>
                          <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książk</p>
-                    </div>
-                </li>
+                 </li>
              </ul>
           </div>
          </section>
 
-         <section id="cennik">
+         <section id="pricelist">
             <h1>Cennik</h1>
-             <div id="cennik_container">
+             <div id="pricelist_container">
              <ul>
                  <li>
                      <div class="box">
@@ -122,24 +115,33 @@
         <section id="kontakt">
 
             <h1>Kontakt</h1>
-            <div id="formularz"></div>
 
-            <div id="aside">
-                <img src="images/red_chair.png">
-                <div id="znaczek"></div>
-                <a href="">Wyślij</a>
-            </div>
+            <form id="form">
+                <div><input type="text" name="name" id="name" class="formField" placeholder="Imię i nazwisko"/></div>
+                <div><input type="text" name="email" id="email" class="formField" placeholder="email"/></div>
+                <div><textarea name="message" id="message" class="formField" placeholder="Wiadomość"></textarea></div>
+                <div><button type="submit" id="sendBtn">Wyślij</button></div>
+            </form>
 
+            <div class="contact-right">
+                    <img src="images/red_chair.png">
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
+                    </div>
         </section>
     </div>
 
-    <footer id="main_footer">
-        <p>&copy; Copywrite 2014| All rights reserved- Sit on chair<p>
-        <img src="images/flickr.png">
-        <img src="images/pinterest.png">
-        <img src="images/twitter.png">
-        <img src="images/vimeo.png">
-        <p>Sit on chair</p>
+    <footer>
+        <p id="copy">&copy; Copywrite 2014| All rights reserved- Sit on chair</p>
+        <div id="social_media">
+          <img src="images/flickr.png">
+          <img src="images/pinterest.png">
+          <img src="images/twitter.png">
+          <img src="images/vimeo.png">
+        </div>
+
+        <p>Sit <span>on </span>chair</p>
     </footer>
 </div>
 
