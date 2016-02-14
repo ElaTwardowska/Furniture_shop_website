@@ -129,7 +129,7 @@ span.fav {
     height: 300px;
     overflow:hidden;
 }
-#prod_container {
+#product_list ul{
     width:1000px;
     margin:0 auto;
 }
