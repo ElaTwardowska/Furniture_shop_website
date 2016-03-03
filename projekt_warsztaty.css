@@ -21,50 +21,115 @@ body {
     line-height: 30px;
     text-transform: uppercase;
 }
-#main_header .menu ul {
-    text-align: right;
-}
-#main_header .menu ul li{
-    display: inline-block;
-}
-#main_header .menu ul li a {
+#main_header::after {
+    clear: both;
+    content: "";
     display: block;
-    padding: 10px 30px;
-    color: white;
-    text-align: right;
-    text-decoration: none;
-    line-height: 30px;
-    text-transform: uppercase;
-    font-size: 15px;
 }
-#main_header .menu ul .sub-menu {
-    position: absolute;
-    top: 65px;
-    display: none;
-    width: 140px;
-    background-color: black;
-    text-align: left;
-    font-size: 14px;
+/*!*style menu*!*/
 
+.menu li {
+    padding: 10px;
+    line-height:10px;
 }
-#main_header .menu ul .sub-menu a {
-    text-transform: capitalize;
-    line-height: 20px;
+.menu {
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    padding: 0;
+    height: 30px;
+    cursor: default;
+    list-style: none;
 }
-#main_header .menu ul .sub-menu-arrow {
+.menu > li {
+    position: relative;
+    float: left;
+    color: white;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.menu > li > div {
     position: absolute;
-    top: 55px;
-    right: 594px;
+    left: 40px;
+    top: 45px;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: normal;
+    font-size: 80%;
     display: none;
+}
+.menu > li:hover > div {
+    display: list-item;
+}
+.menu > li > div > ul {
+    background: black;
+    color:white;
+    width: 150px;
+    border: 1px solid #000;
+    text-align: left;
+    padding: 0 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+#main_header .menu  .sub-menu-arrow {
+    position: absolute;
     width: 20px;
     height: 20px;
+    top:0px;
+    left:30px;
     background-color: black;
     transform: rotate(45deg);
 }
-#main_header .menu ul li:hover .sub-menu,
-#main_header .menu ul li:hover .sub-menu-arrow{
-    display: block;
-}
+
+
+/*#main_header .menu ul {*/
+    /*text-align: right;*/
+/*}*/
+/*#main_header .menu ul li{*/
+    /*display: inline-block;*/
+/*}*/
+/*#main_header .menu ul li a {*/
+    /*display: block;*/
+    /*padding: 10px 30px;*/
+    /*color: white;*/
+    /*text-align: right;*/
+    /*text-decoration: none;*/
+    /*line-height: 30px;*/
+    /*text-transform: uppercase;*/
+    /*font-size: 15px;*/
+/*}*/
+/*#main_header .menu ul .sub-menu {*/
+    /*position: absolute;*/
+    /*top: 65px;*/
+    /*display: none;*/
+    /*width: 140px;*/
+    /*background-color: black;*/
+    /*text-align: left;*/
+    /*font-size: 14px;*/
+
+/*}*/
+/*#main_header .menu ul .sub-menu a {*/
+    /*text-transform: capitalize;*/
+    /*line-height: 20px;*/
+/*}*/
+/*#main_header .menu ul .sub-menu-arrow {*/
+    /*position: absolute;*/
+    /*top: 55px;*/
+    /*right: 594px;*/
+    /*display: none;*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*background-color: black;*/
+    /*transform: rotate(45deg);*/
+/*}*/
+/*#main_header .menu ul li:hover .sub-menu,*/
+/*#main_header .menu ul li:hover .sub-menu-arrow{*/
+    /*display: block;*/
+/*}*/
 span.fav {
     color: #26c7a9;
 }
@@ -133,11 +198,10 @@ span.fav {
 #product_list ul {
     margin: 0 auto;
     width: 1000px;
-}
-#product_list ul li {
-    display: inline-block;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
     padding: 15px 15px;
-    width: 30%;
 }
 #product_list ul li h1{
     position: absolute;
