@@ -1,3 +1,3 @@
-# Projekt_strony "SIT-ON-CHAIR"
+# Furniture_shop_website"
 
-Projekt prostej strony zrobiony na pierwszych warsztatach kursu Coderslab 
+Company website template developed during the first Coderslab workshop (only HTML and CSS used)
